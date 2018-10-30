@@ -1,0 +1,37 @@
+<!--
+  Generated template for the UserdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>userdetail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+<div class="container">
+   <div class="row">
+		<div class="col-md-12" *ngFor="let post of user?.data;">
+
+		<h2 class="already-use">Logged In!</h2>
+		<div class="profile-img">
+			<img src="https://png.icons8.com/ios/1600/user-male-circle-filled.png">
+			<hr>
+			<h2>{{post.full_name}}</h2>
+			<h2>{{post.email}}</h2>
+			<h2>{{post.phone}}</h2>
+		</div>
+		<button class="btn btn-info mt-4"  (click)="logout()">Logout</button>
+
+		</div>
+	</div>
+
+</div>
+
+</ion-content>

@@ -1,0 +1,40 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>singleProduct</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+	<div *ngFor="let product of product?.data;">
+	<ion-row class="detail-page-img">
+		<div align="center"><img src="http://192.168.1.109:3000/product_image/{{product.product_image}}" height="100px" width="100px" /></div>
+		<h4 style="font-size: 10px;" align="center">{{product.product_name}} </h4>
+    </ion-row>
+    <div class="clearfix"></div>
+  	<ion-row>
+    	<ion-col class="div-2">
+    		<p>{{product.product_description}}
+			</p>
+			<h3>{{product.product_price}}</h3>
+			<button class="btn-1">ADD TO BAG</button>
+			<button class="btn-1 btn-2">SAVE FOR LATTER</button>
+
+			<h2>About Me</h2>
+			<h5>Body : 100% Cotton</h5>
+
+			<h2>Size & Fit</h2>
+			<h5>Body : Lorem Ipsum is simply</h5>
+
+			<h2>Looking for After Me</h2>
+			<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
+    	</ion-col>
+	</ion-row>
+	</div>
+
+</ion-content>
+
+
+

@@ -1,0 +1,95 @@
+page-home {
+
+.img{
+	height: auto;
+	width: 100%;
+}
+
+.image-slider{
+	margin: 20px 0 10px;
+}
+.multi-img img{
+    width: 70px;
+    height: 67px;
+    margin-top: 16px;
+}
+.img-container{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #4b4b4b;
+}
+
+.multi-img h2{
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+}
+
+.checked {
+    color: orange;
+}
+.div-1{
+	background: lightgray;
+	padding: 20px;
+	margin: 20px 0px;
+}
+.div-1 img{
+	margin: auto;
+	display: block;
+	height: 160px;
+    width: auto;
+}
+.div-1 h3, .div-1 span{
+	text-align: center;
+	font-size: 16px;
+}
+.rate, .price {
+	width: 100%;
+	text-align: center;
+}
+.rate .fa-star{
+	text-align: center;
+	display: inline-block;
+}
+.price label{
+	font-size: 16px;
+}
+
+ion-slides {
+    height: auto!important;
+}
+.btn-1{
+	width: 100%;
+	    padding: 10px;
+	    background: #fa6f1c;
+	    color: #fff;
+}
+.ac{
+	background:blue;
+}
+.button-inner{
+	background: blue;
+}
+@media (max-width: 576px) {
+       
+	.img-container {
+	    border-radius: 50%;
+	    width: 50px;
+	    height: 50px;
+	    border: 1px solid #4b4b4b;
+	}
+	.multi-img h2 {
+	    text-align: center;
+	    font-size: 10px;
+	    color: #000;
+	    margin: 5px 0px;
+	}
+	.multi-img img {
+	    width: 32px;
+	    height: 33px;
+	    margin-top: 7px;
+	}
+}
+
+}

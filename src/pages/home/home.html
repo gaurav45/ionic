@@ -1,0 +1,290 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+     <b>Diwali Festival Sale</b>
+    </ion-title>
+  </ion-toolbar>
+  <ion-searchbar  placeholder="{{ 'SEARCH_PLACEHOLDER'  }}"></ion-searchbar>
+  <div class="ac">
+    <ion-buttons right>
+        <button ion-button icon-only>
+            <ion-badge *ngIf="itemsInCart.length">{{itemsInCart.length}}</ion-badge>
+            <ion-icon name="cart"></ion-icon>
+        </button>
+    </ion-buttons>
+    </div>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides autoplay="5000" loop="true" speed="300">
+    <ion-slide >
+       <img src="../../assets/images/slide-3.jpg" class="img" />
+    </ion-slide>
+    <ion-slide >
+      <img src="../../assets/images/slide-2.jpg" class="img" >
+    </ion-slide>
+    <ion-slide >
+      <img src="../../assets/images/slide-1.jpg" class="img" >
+    </ion-slide>
+  </ion-slides>
+
+ 
+    <ion-slides class="image-slider multi-img" autoplay="5000" loop="true" speed="300">
+            <ion-slide>
+                <ion-row >
+                    <ion-col>
+                        <div class="img-container" >
+                          <img src="../../assets/images/product-1.jpg" class="multi" />
+                        </div>
+                        <h2>Shoes</h2>
+                    </ion-col>
+                    <ion-col>
+                        <div class="img-container" ><img src="../../assets/images/product-2.jpg" class="multi"/></div>
+                        <h2>Sunglasses</h2>
+                    </ion-col>
+                    <ion-col>
+                        <div class="img-container" ><img src="../../assets/images/product-3.jpg" class="multi"/></div>
+                        <h2>PowerBank</h2>
+                    </ion-col>
+                    <ion-col>
+                        <div class="img-container" ><img src="../../assets/images/product-4.jpg" class="multi"/></div>
+                        <h2>Mobile</h2>
+                    </ion-col>
+                    <ion-col>
+                        <div class="img-container" ><img src="../../assets/images/product-5.jpg" class="multi"/></div>
+                        <h2>Bags</h2>
+                    </ion-col>
+                </ion-row>
+             </ion-slide>
+             
+
+           <ion-slide >
+                  <ion-row >
+                      <ion-col>
+                          <div class="img-container"><img src="../../assets/images/product-6.jpg"/></div>
+                          <h2>Pillow</h2>
+                      </ion-col>
+                      <ion-col>
+                          <div class="img-container"><img src="../../assets/images/product-7.jpg" /></div>
+                          <h2>Toys</h2>
+                      </ion-col>
+                      <ion-col>
+                          <div class="img-container"><img src="../../assets/images/product-8.jpg" /></div>
+                          <h2>Cars</h2>
+                      </ion-col>
+                      <ion-col>
+                          <div class="img-container"><img src="../../assets/images/product-9.jpg" /></div>
+                          <h2>Mobile</h2>
+                      </ion-col>
+                      <ion-col>
+                          <div class="img-container"><img src="../../assets/images/product-10.jpg" /></div>
+                          <h2>Beans</h2>
+                      </ion-col>
+                  </ion-row>
+           </ion-slide>
+        
+         </ion-slides>
+
+        <ion-row>
+        <ion-col>
+          <img src="../../assets/images/banner-1.jpg">
+        </ion-col>
+        </ion-row>
+        <div *ngFor="let post of product;  let i = index">
+        <ion-row  class="div-1">
+
+          <ion-col>
+            <div class="img-container1">
+              <img src="http://192.168.1.109:3000/product_image/{{product[i].product_image}}"  #data id={{product[i].product_id}} (click)="singleProduct(data.id)" />
+            </div>
+            <h3>{{ product[i].product_name}}</h3>
+            
+            <div class="ratle">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+
+            <div class="price">
+             
+              <label>Rs. {{ product[i].product_price }}</label>
+             
+            </div>
+
+            <button class="btn-1" (click)="addToCart(post)">ADD TO Cart</button>
+
+
+          </ion-col>
+
+        <!--   <ion-col>
+            <div class="img-container1">
+              <img src="../../assets/images/p1.jpg" (click)="singleProduct()" />
+            </div>
+            
+            <h3>{{ product[i].product_name}}</h3>
+
+            <div class="rate">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+
+            <div class="price">
+              <label>Rs. {{product[i].product_price}}</label>
+            </div>
+
+          </ion-col> -->
+        </ion-row>
+        </div>
+
+
+       <!--  <ion-row class="div-1">
+          <ion-col>
+            <div class="img-container1">
+              <img src="../../assets/images/p1.jpg" (click)="singleProduct()" />
+            </div>
+            <h3>Forzza Kate Wall Shelf, Set of 3 (Matte Finish, Wenge) </h3>
+
+            <div class="rate">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+
+            <div class="price">
+              <label>Rs. 999</label>
+            </div>
+
+          </ion-col>
+
+
+          <ion-col>
+            <div class="img-container1">
+              <img src="../../assets/images/p2.jpg"  (click)="singleProduct()" />
+            </div>
+            <h3>Bean Bag</h3>
+
+             <div class="rate">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+
+            <div class="price">
+              <label>Rs. 450</label>
+            </div>
+
+          </ion-col>
+
+
+         
+        </ion-row>
+ -->
+<!-- 
+        <ion-row class="div-1">
+          <ion-col>
+            <div class="img-container1">
+              <img src="../../assets/images/p4.jpg" (click)="singleProduct()" />
+            </div>
+            <h3>RedMi Note5 Pro</h3>
+            
+            <div class="rate">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+
+            <div class="price">
+              <label>Rs. 9999</label>
+            </div>
+
+          </ion-col>
+
+
+          <ion-col>
+            <div class="img-container1">
+              <img src="../../assets/images/p5.jpg" (click)="singleProduct()"  />
+            </div>
+            <h3>Children Dashing Motorcycle </h3>
+
+             <div class="rate">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+
+            <div class="price">
+              <label>Rs. 10,000</label>
+            </div>
+
+          </ion-col>
+
+
+          
+        </ion-row> -->
+
+        
+          <!--   <ion-row class="div-1">
+            <ion-col>
+
+              <div class="img-container1">
+                <img src="../../assets/images/p6.jpg" (click)="singleProduct()"  />
+              </div>
+              <h3>SkyBags</h3>
+
+               <div class="rate">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+
+              <div class="price">
+                <label>Rs. 1500</label>
+              </div>
+
+            
+
+          </ion-col>
+
+           <ion-col>
+              <div class="img-container1">
+                <img src="../../assets/images/p3.jpg" (click)="singleProduct()" />
+              </div>
+              <h3>Single Sofa</h3>
+
+               <div class="rate">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+
+              <div class="price">
+                <label>Rs. 2000</label>
+              </div>
+
+            </ion-col>
+          </ion-row>      -->
+
+</ion-content>
+
+
+
+

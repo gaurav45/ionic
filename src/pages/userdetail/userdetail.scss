@@ -1,0 +1,63 @@
+
+/*30 Oct start code css*/
+
+
+
+page-userdetail { 
+
+@media (max-width: 767px) {
+
+
+.profile-img {
+	width: 100%;
+	text-align: center;
+}
+
+.profile-img img {
+    width: 130px;
+    border-radius: 50%;
+    margin: 20px 0 0;
+}
+
+h2.already-use {
+	font-size: 18px;
+	text-align: center;
+}
+
+.profile-img h2 {
+    font-size: 16px;
+    margin: 4px 0 10px;
+    text-align: left;
+    color: #333;
+}
+
+.profile-img hr {
+    background-color: rgba(0, 0, 0, 0.23);	
+}
+
+    
+
+.profile-img+button {
+	float: right;
+    margin-top: 22px;
+    padding: 3px 14px;
+    border-radius: 5px;
+    background: #e13838;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    border: solid 1px #e13838;
+}
+
+
+}
+
+	
+}
+
+
+
+
+
+/*30 Oct end code css*/
